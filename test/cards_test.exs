@@ -11,4 +11,10 @@ defmodule CardsTest do
     deck = Cards.create_deck
     assert deck != Cards.shuffle(deck)
   end
+
+  test "saving file" do
+    deck = Cards.create_deck
+    assert Cards.save(deck, "TestSave") == :ok
+  end
+
 end
